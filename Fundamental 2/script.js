@@ -394,7 +394,43 @@ const jonas = [
 // jonas[5] does NOT exist
 
 
-
 for(let i=0; i < jonas.length;  i++){
+    // Reading from jonas array
+    console.log(jonas[i], typeof jonas[i]);
+
+    // Filling types array 
+    // types[i] = typeof jonas[i];
+
+    types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 1992, 1996, 2014];
+const ages = [];
+
+for (let i = 0; i < years.length; i++){
+    ages.push(2021 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break loop
+console.log('---- ONLY STRING WILL BE LOG ---');
+for (let i=0; i < jonas.length;  i++){
+
+    if (typeof jonas[i] !== 'string') continue;
+    // this continue word will immeadiately exit the current iteration so the line of code below will not be executed in the current iteration 
+    
     console.log(jonas[i], typeof jonas[i]);
 }
+
+
+console.log('---- BREAK WITH NUMBER  ---');
+for (let i=0; i < jonas.length;  i++){
+
+    if (typeof jonas[i] === 'number') break;
+
+    console.log(jonas[i], typeof jonas[i]);
+}
+ 
