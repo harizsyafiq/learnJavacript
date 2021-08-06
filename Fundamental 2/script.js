@@ -375,7 +375,7 @@ for(let rep = 1; rep >= 30 ; rep ++) {
     console.log(`Lifting weight repetition ${rep} 🏋️`);
 }*/
 
-
+/*
 // looping Array , Breaking and Continuing
 
 const jonas = [ 
@@ -433,4 +433,56 @@ for (let i=0; i < jonas.length;  i++){
 
     console.log(jonas[i], typeof jonas[i]);
 }
- 
+ */
+/*
+// Looping Backwards and Loops in Loops
+
+const jonas = [ 
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Micheal','Peter','Steven'],
+];
+
+// ... Looping Backwards
+// 0,1, ..., 4 - Ascending order
+// 4,3, ..., 0 - Descending order
+
+for (let i = jonas.length - 1; i >= 0; i--){
+    console.log(i, jonas[i]);
+}
+
+// ... Loops in loops
+
+for (let exercise = 1; exercise < 4; exercise++){
+    console.log(`------- Starting exercise ${exercise}`);
+
+    for(let rep = 1; rep < 6; rep++){
+        console.log(`Exercise ${exercise} Lifting weight repetition ${rep} 🏋️`);
+    }
+}
+*/
+
+
+// The While Loop
+
+    // .. it does not depend on any counter variable
+
+// for(let rep = 1; rep <= 10 ; rep ++) {
+//     console.log(`Lifting weight repetition ${rep} 🏋️`);
+// }
+
+let rep = 1;
+while (rep <= 10) {
+    console.log(`WHILE : Lifting weight repetition ${rep} 🏋️`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) +1; // Using math.trunc to get rid of the decimal
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) +1;
+    if (dice ===6) console.log('Loop is about to end');
+}
